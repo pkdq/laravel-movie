@@ -6,7 +6,7 @@
 
             <div class="flex-none">
                 <img
-                    src="{{ 'https://image.tmdb.org/t/p/w500/' . $movie['poster_path'] }}"
+                    src="https://image.tmdb.org/t/p/w500/{{ $movie['poster_path'] }}"
                     alt="{{ $movie['title'] }}"
                     class="w-64 lg:w-96">
             </div>
@@ -76,7 +76,7 @@
                     @if ($loop->index < 5)
                         <div class="mt-8">
                             <a href="#">
-                                <img src="{{ 'https://image.tmdb.org/t/p/w500/' . $cast['profile_path'] }}" alt="parasite" class="hover:opacity-75 transition-ease-in-out duration-150">
+                                <img src="https://image.tmdb.org/t/p/w500/{{ $cast['profile_path'] }}" alt="parasite" class="hover:opacity-75 transition-ease-in-out duration-150">
                             </a>
 
                             <div class="mt-2">
@@ -104,7 +104,7 @@
                     @if ($loop->index < 9)
                         <div class="mt-8">
                             <a href="#">
-                                <img src="{{ 'https://image.tmdb.org/t/p/w500/' . $backdrops['file_path'] }}" alt="{{ $movie['title'] }}" class="hover:opacity-75 transition-ease-in-out duration-150">
+                                <img src="https://image.tmdb.org/t/p/w500/{{ $backdrops['file_path'] }}" alt="{{ $movie['title'] }}" class="hover:opacity-75 transition-ease-in-out duration-150">
                             </a>
                         </div>
                     @endif
