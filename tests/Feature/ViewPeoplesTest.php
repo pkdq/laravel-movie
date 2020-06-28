@@ -66,79 +66,79 @@ class ViewPeoplesTest extends TestCase
     private function fakePeople()
     {
         return Http::response([
-                "birthday" => "1968-09-25",
-                "known_for_department" => "Acting",
-                "deathday" => null,
-                "id" => 2888,
-                "name" => "Will Smith",
-                "gender" => 2,
-                "biography" => "Willard Christopher Smith is an American actor, film producer and pop rapper. He has enjoyed success in music",
-                "popularity" => 18.03,
-                "place_of_birth" => "Philadelphia, Pennsylvania, U.S.A.",
-                "profile_path" => "/eze9FO9VuryXLP0aF2cRqPCcibN.jpg",
-                "adult" => false,
-                "homepage" => "http://www.willsmith.com",
-            ], 200);
+            "birthday" => "1968-09-25",
+            "known_for_department" => "Acting",
+            "deathday" => null,
+            "id" => 2888,
+            "name" => "Will Smith",
+            "gender" => 2,
+            "biography" => "Willard Christopher Smith is an American actor, film producer and pop rapper. He has enjoyed success in music",
+            "popularity" => 18.03,
+            "place_of_birth" => "Philadelphia, Pennsylvania, U.S.A.",
+            "profile_path" => "/eze9FO9VuryXLP0aF2cRqPCcibN.jpg",
+            "adult" => false,
+            "homepage" => "http://www.willsmith.com",
+        ], 200);
     }
 
     private function fakeSocial()
     {
         return Http::response([
 
-                "id" => 2888,
-                "twitter_id" => null,
-                "facebook_id" => "WillSmith",
-                "tvrage_id" => 9542,
-                "instagram_id" => "willsmith",
-                "freebase_mid" => "/m/0147dk",
-                "imdb_id" => "nm0000226",
-                "freebase_id" => "/en/will_smith",
+            "id" => 2888,
+            "twitter_id" => null,
+            "facebook_id" => "WillSmith",
+            "tvrage_id" => 9542,
+            "instagram_id" => "willsmith",
+            "freebase_mid" => "/m/0147dk",
+            "imdb_id" => "nm0000226",
+            "freebase_id" => "/en/will_smith",
 
-            ], 200);
+        ], 200);
     }
 
     private function fakeCredits()
     {
         return Http::response([
-                'cast' => [
-                    [
-                        "id" => 602,
-                        "character" => "Captain Steven Hiller",
-                        "original_title" => "Independence Day",
-                        "overview" => "On July 2, a giant alien mothership enters orbit around Earth and deploys several dozen saucer-shaped 'destroyer' spacecraft that quickly lay waste to major city",
-                        "vote_count" => 6189,
-                        "video" => false,
-                        "media_type" => "movie",
-                        "release_date" => "1996-06-25",
-                        "vote_average" => 6.8,
-                        "title" => "Independence Day",
-                        "popularity" => 23.016,
-                        "original_language" => "en",
-                        "backdrop_path" => "/4E2xKGrU2qcqUE2S3Nl27hwZdqy.jpg",
-                        "adult" => false,
-                        "poster_path" => "/bqLlWZJdhrS0knfEJRkquW7L8z2.jpg",
-                        "credit_id" => "52fe425bc3a36847f8017f8b",
-                    ],
-                    [
-                        "id" => 1402,
-                        "character" => "Chris Gardner",
-                        "original_title" => "The Pursuit of Happyness",
-                        "overview" => "A struggling salesman takes custody of his son as he's poised to begin a life-changing professional career.",
-                        "vote_count" => 6072,
-                        "video" => false,
-                        "media_type" => "movie",
-                        "poster_path" => "/iMNp6gTeDBXbzjKRNYtorxZ76G2.jpg",
-                        "backdrop_path" => "/yFQg8nKzAWGNNBg277bvHyWSCJu.jpg",
-                        "popularity" => 18.202,
-                        "title" => "The Pursuit of Happyness",
-                        "original_language" => "en",
-                        "vote_average" => 7.9,
-                        "adult" => false,
-                        "release_date" => "2006-12-14",
-                        "credit_id" => "52fe42f3c3a36847f802f1eb",
-                    ]
+            'cast' => [
+                [
+                    "id" => 602,
+                    "character" => "Captain Steven Hiller",
+                    "original_title" => "Independence Day",
+                    "overview" => "On July 2, a giant alien mothership enters orbit around Earth and deploys several dozen saucer-shaped 'destroyer' spacecraft that quickly lay waste to major city",
+                    "vote_count" => 6189,
+                    "video" => false,
+                    "media_type" => "movie",
+                    "release_date" => "1996-06-25",
+                    "vote_average" => 6.8,
+                    "title" => "Independence Day",
+                    "popularity" => 23.016,
+                    "original_language" => "en",
+                    "backdrop_path" => "/4E2xKGrU2qcqUE2S3Nl27hwZdqy.jpg",
+                    "adult" => false,
+                    "poster_path" => "/bqLlWZJdhrS0knfEJRkquW7L8z2.jpg",
+                    "credit_id" => "52fe425bc3a36847f8017f8b",
+                ],
+                [
+                    "id" => 1402,
+                    "character" => "Chris Gardner",
+                    "original_title" => "The Pursuit of Happyness",
+                    "overview" => "A struggling salesman takes custody of his son as he's poised to begin a life-changing professional career.",
+                    "vote_count" => 6072,
+                    "video" => false,
+                    "media_type" => "movie",
+                    "poster_path" => "/iMNp6gTeDBXbzjKRNYtorxZ76G2.jpg",
+                    "backdrop_path" => "/yFQg8nKzAWGNNBg277bvHyWSCJu.jpg",
+                    "popularity" => 18.202,
+                    "title" => "The Pursuit of Happyness",
+                    "original_language" => "en",
+                    "vote_average" => 7.9,
+                    "adult" => false,
+                    "release_date" => "2006-12-14",
+                    "credit_id" => "52fe42f3c3a36847f802f1eb",
                 ]
-            ], 200);
+            ]
+        ], 200);
     }
 
     private function fakePopularPeople()
