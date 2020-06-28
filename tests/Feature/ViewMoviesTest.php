@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Http;
 use Tests\TestCase;
 use Livewire\Livewire;
 
-class VueMoviesTest extends TestCase
+class ViewMoviesTest extends TestCase
 {
     /** @test */
     public function the_main_page_should_show_correct_data()

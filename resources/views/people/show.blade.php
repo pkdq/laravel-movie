@@ -62,14 +62,14 @@
 
                     @foreach ($knownForTitles as $title)
                         <div class="mt-4">
-                            <a href="{{ route('movies.show', $title['id']) }}">
+                            <a href="{{ $title['linkToDetailsPage']  }}">
                                 <img
                                     src="{{ $title['poster_path'] }}"
                                     alt="poster"
                                     class="hover:opacity-75 transition ease-in-out duration-150">
                             </a>
 
-                            <a href="{{ route('movies.show', $title['id']) }}" class="text-sm leading-normal block text-gray-400 hover:text-white mt-1">{{ $title['title'] }}</a>
+                            <a href="{{ $title['linkToDetailsPage'] }}" class="text-sm leading-normal block text-gray-400 hover:text-white mt-1">{{ $title['title'] }}</a>
                         </div>
                     @endforeach
 

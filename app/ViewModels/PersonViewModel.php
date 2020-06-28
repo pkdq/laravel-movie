@@ -36,12 +36,24 @@ class PersonViewModel extends ViewModel
     {
         $castTitles = collect($this->credits)->get('cast');
 
-        return collect($castTitles)->where('media_type', 'movie')->sortByDesc('popularity')->take(5)->map(function($title) {
+        return collect($castTitles)->sortByDesc('popularity')->take(5)->map(function($title) {
+
+            if (isset($title['title'])) {
+                $showTitle = $title['title'];
+            } elseif (isset($title['name'])) {
+                $showTitle = $title['name'];
+            } else {
+                $showTitle = 'Untitled';
+            }
+
             return collect($title)->merge([
                 'poster_path' => $title['poster_path']
                     ? 'https://image.tmdb.org/t/p/w185' . $title['poster_path']
                     : 'https://via.placeholder.com/300x450',
-                'title' => isset($title['title']) ? $title['title'] : 'Untitled',
+                'title' => $showTitle,
+                'linkToDetailsPage' => $title['media_type'] === 'movie'
+                    ? route('movies.show', $title['id'])
+                    : route('tv.show', $title['id']),
             ]);
         });
     }
